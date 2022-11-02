@@ -1,0 +1,65 @@
+/*
+    Author: Kendrick Davis
+    Date: 11/1/22
+ */
+
+html {
+    font-family: Verdana, Geneva, sans-serif;
+    height: 100%;
+}
+
+body {
+    background-color: white;
+    margin: 0px auto;
+}
+
+header {
+    border-bottom: 1px solid rgb(0, 0, 0);
+    color: white;
+}
+
+header nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 5px;
+}
+
+header nav ul li {
+    font-size: 1.2em;
+    line-height: 2.3em;
+    display: inline;
+    height: 2.3em;
+    padding: 0px 10px;
+}
+
+header nav ul li a {
+    color: black;
+    width: 100%;
+    text-decoration: none;
+}
+
+header nav ul li a:hover {
+    color: red;
+    text-decoration: underline;
+}
+
+.searchbar {
+    width: 100%;
+    display: block;
+    margin: auto;
+    padding: 15px;
+    width: 50%;
+}
+
+.picture {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+}
+
+.popularproducts {
+    padding: 10px;
+    margin: auto;
+    display: grid;
+}
