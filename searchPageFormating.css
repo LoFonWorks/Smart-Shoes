@@ -1,0 +1,16 @@
+/*
+    Smart Shoes Search Page CSS
+    Author: Logan Fontenot
+    Date:   11/2/22  
+
+    Filename: seachPage.css
+*/
+
+body
+{
+   width: 95%;
+   min-width: 640px;
+   max-width: 960px;
+   margin-left: auto;
+   margin-right: auto;
+}

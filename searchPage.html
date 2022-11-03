@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <!--
+            Smart Shoes Search Page HTML
+            Author: Logan Fontenot
+            Date:   11/2/22
+
+            Filename:   searchPage.html
+
+        -->
+        <meta charset="utf-8" />
+        <title>Search Page</title>
+        <link href="searchPage.css" rel="stylesheet"/>
+        <link href="searchPageFormating.css" rel="stylesheet"/>
+    </head>
+
+    <body>
+        <header>
+            <img src="smart_shoes.png" alt="Smart Shoes" id="logoimg"/>
+            <nav>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="searchPage.html">Men</a></li>
+                    <li><a href="searchPage.html">Women</a></li>
+                    <li><a href="searchPage.html">Kids</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Sign In</a></li>
+                    <li><a href="#">My Cart</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <fieldset id="pickupInfo">
+            <legend>Filters</legend>
+            <div>
+                <label for="men">Men Shoes</label>
+                <input id="men" name="genderFilter" type="radio"/>
+            </div>
+            <div>
+                <label for="women">Women Shoes</label>
+                <input id="women" name="genderFilter" type="radio"/>
+            </div>
+            <hr/>
+            <div>
+                <label for="children">Child Shoes</label>
+                <input id="children" name="ageFilter" type="radio"/>
+            </div>
+            <div>
+                <label for="children">Adult Shoes</label>
+                <input id="children" name="ageFilter" type="radio"/>
+            </div>
+            <hr/>
+            <div>
+                <label for="price">Price Range</label>
+                <input id="price" name="priceFilter" type="range"
+                       value="100" step="25" min="50" max="500"/>
+            </div>
+        </fieldset>
+
+        <div class="searchbar">
+            <input type="text" placeholder="Search..." name="search">
+            <button type="submit">Submit</button>
+        </div>
+
+        <div class="searchResults">
+            <ul>
+                <p>item 1</p>
+                <p>item 2</p>
+                <p>item 3</p>
+                <p>item 4</p>
+            </ul>
+        </div>
+    </body>
+</html>
