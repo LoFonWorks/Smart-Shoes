@@ -3,22 +3,35 @@
     Date: 11/1/22
  */
 
-html {
+* {
     font-family: Verdana, Geneva, sans-serif;
+}
+
+html {
     height: 100%;
+    background-color: rgb(45, 58, 87);
 }
 
 body {
     background-color: white;
+    box-shadow: rgb(20, 20, 20) 20px 0px 20px,  rgb(20, 20, 20) -20px 0px 20px,
+    inset rgb(10, 10, 10) 0px 0px 10px;
+    border-left: 3px solid rgb(20, 20, 20);
+    border-right: 3px solid rgb(20, 20, 20);
+    min-height: 100%;
     margin: 0px auto;
+    min-width: 320px;
+    max-width: 1020px;
+    width: 100%;
 }
 
 header {
     border-bottom: 1px solid rgb(0, 0, 0);
-    color: white;
+    color: black;
 }
 
 header nav ul {
+    background-color: rgb(67, 110, 209);
     list-style-type: none;
     margin: 0;
     padding: 5px;
@@ -29,10 +42,11 @@ header nav ul li {
     line-height: 2.3em;
     display: inline;
     height: 2.3em;
-    padding: 0px 10px;
+    padding: 0 10px;
 }
 
 header nav ul li a {
+    font-weight: bold;
     color: black;
     width: 100%;
     text-decoration: none;
@@ -43,23 +57,44 @@ header nav ul li a:hover {
     text-decoration: underline;
 }
 
-.searchbar {
-    width: 100%;
+.searchbar input {
+    float: none;
+    width: 60%;
     display: block;
-    margin: auto;
-    padding: 15px;
-    width: 50%;
+    margin: 5px auto;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    font-size: 1.0625em;
 }
 
-.picture {
+.searchbar button {
+    float: right;
+    padding: 6px 10px;
+    margin-top: -46px;
+    margin-right: 100px;
+    font-size: 1.0625em;
+    cursor: pointer;
+}
+
+.picture img {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 40%;
+    width: 90%;
 }
 
-.popularproducts {
-    padding: 10px;
-    margin: auto;
-    display: grid;
+h1 {
+    padding-top: 5px;
+    padding-left: 5%;
+}
+
+.row {
+    display: flex;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.column {
+    flex: 33.33%;
+    padding: 5px;
 }
