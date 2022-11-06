@@ -17,10 +17,10 @@
 
     <body>
         <header>
-            <section>
-                <a href="home.html"><img src="smart_shoes.png" alt="Smart Shoes" id="logoimg"/></a>
-                <h1>Smart Shoes</h1>
-            </section>
+            <a href="home.html"><img src="shoe.png" alt="Smart Shoes" id="logoimg"/></a>
+            <h6>
+            ..
+            </h6>
             <nav>
                 <ul>
                     <li><a href="home.html">Home</a></li>
@@ -29,7 +29,7 @@
                     <li><a href="searchPage.html">Kids</a></li>
                     <li><a href="#">Contact Us</a></li>
                     <li><a href="#">Sign In</a></li>
-                    <li><a href="#">My Cart</a></li>
+                    <li><a href="paymentPage.html">My Cart</a></li>
                 </ul>
             </nav>
         </header>
@@ -65,6 +65,7 @@
                     </div>
                 </fieldset>
             </div>
+
             <div class="col-2-3">
                 <div class="searchbar">
                     <input type="text" placeholder="Search..." name="search">
@@ -72,16 +73,35 @@
                 </div>
 
                 <div class="searchResults">
-                    <ul>
-                        <p>item 1</p>
-                        <p>item 2</p>
-                        <p>item 3</p>
-                        <p>item 4</p>
-                    </ul>
+                    <h1>Products</h1>
+                    <div class="item1">
+                        <img src="popular1.jpg"/>
+                        <div>
+                            <p>$50/Pair</p>
+                            <input id="item1Quanity" type="number" value="1"  min="1" max="10"/>
+                        </div>
+                    </div>
+                    <div class="item2">                        
+                        <img src="popular2.jpg"/>
+                        <div>
+                            <input id="item2Quanity" type="number" value="1"  min="1" max="10"/>
+                        </div>
+                    </div>
+                    <div class="item3">
+                        <img src="popular3.jpg"/>
+                        <div>                            
+                            <input id="item3Quanity" type="number" value="1"  min="1" max="10"/>
+                        </div>
+                    </div>
+                    <div class="item4">
+                        <img src="popular4.jpg"/>
+                        <div>                            
+                            <input id="item4Quanity" type="number" value="1"  min="1" max="10"/>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        
 
         <footer>
             Smart Shoes &copy; 2022 All Rights Reserved
