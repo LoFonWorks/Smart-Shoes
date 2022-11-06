@@ -7,13 +7,33 @@
     font-family: Verdana, Geneva, sans-serif;
 }
 
+article, aside, figcaption, figure,
+footer, header, main, nav, section {
+    display: block;
+}
+
+address, article, aside, blockquote, body, cite,
+div, dl, dt, dd, em, figcaption, figure, footer,
+h2, h3, h4, h5, h6, header, html, img,
+li, main, nav, ol, p, section, span, ul {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
 html {
     height: 100%;
     background-color: rgb(45, 58, 87);
 }
 
 body {
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     box-shadow: rgb(20, 20, 20) 20px 0px 20px,  rgb(20, 20, 20) -20px 0px 20px,
     inset rgb(10, 10, 10) 0px 0px 10px;
     border-left: 3px solid rgb(20, 20, 20);
@@ -25,16 +45,39 @@ body {
     width: 100%;
 }
 
+#logoimg {
+    float: left;
+}
+
+header h6 {
+    width: 100%;
+    font-size: 6em;
+    background-image: url("shoe2.png");
+    padding: 8px;
+    border-top: 5mm solid black;
+    box-shadow: inset  -5px 10px 0px rgb(0, 0, 0);
+    border-bottom: 7mm solid black;
+    border-left: 1mm solid black;
+    color: rgba(0, 0, 0, 0);
+}
+
 header {
     border-bottom: 1px solid rgb(0, 0, 0);
+    background-color:black;
+    color: white;
     color: black;
 }
 
 header nav ul {
-    background-color: rgb(67, 110, 209);
+    background-color: rgb(67,110,209);
     list-style-type: none;
     margin: 0;
     padding: 5px;
+    border-top: 1mm solid black;
+    box-shadow: inset 0 5px 15px 0px rgba(0, 0, 0, 0.75);
+    text-align: center;
+    width: 100%;
+    overflow: auto;
 }
 
 header nav ul li {
@@ -42,19 +85,28 @@ header nav ul li {
     line-height: 2.3em;
     display: inline;
     height: 2.3em;
-    padding: 0 10px;
+    padding: 0px 15px 0px 15px;
 }
 
 header nav ul li a {
     font-weight: bold;
     color: black;
-    width: 100%;
     text-decoration: none;
+    padding: 5px;
+    width: 12.5%;
+    text-align: center;
 }
 
 header nav ul li a:hover {
-    color: red;
-    text-decoration: underline;
+    background-color: #f62f5e;
+    color:#fff;
+    text-decoration: none;
+    border-radius: 30px;
+}
+
+header nav ul li a:active {
+    background-color: rgb(168, 207, 95);
+    text-decoration: none;
 }
 
 .searchbar input {
@@ -84,6 +136,7 @@ header nav ul li a:hover {
 }
 
 h1 {
+    font-size: 2.3em;
     padding-top: 5px;
     padding-left: 5%;
 }
@@ -97,4 +150,14 @@ h1 {
 .column {
     flex: 33.33%;
     padding: 5px;
+}
+
+footer {
+    clear: both;
+    border-top: 1mm solid black;
+    box-shadow: inset 0 5px 15px 0px rgba(0, 0, 0, 0.75);
+    background-color: rgb(67, 110, 209);
+    font-size: 0.9em;
+    padding: 10px 0px;
+    text-align: center;
 }
