@@ -1,0 +1,127 @@
+/*
+    Smart Shoes Contact Page CSS
+    Author: Logan Mancilla
+    Date:   11/6/22  
+    Filename: contactPage.css
+*/
+
+/*Initial Settings*/
+article, aside, figcaption, figure,
+footer, header, main, nav, section { 
+   display: block;
+}
+
+address, article, aside, blockquote, body, cite, 
+div, dl, dt, dd, em, figcaption, figure, footer, 
+h1, h2, h3, h4, h5, h6, header, html, img, 
+li, main, nav, ol, p, section, span, ul {
+   margin: 0;
+   padding: 0;
+   border: 0;
+   font-size: 100%;
+   vertical-align: baseline;
+   background: transparent;
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;  
+}
+
+/*Specialized Formating*/
+html {
+    background-color: rgb(45, 58, 87);
+    height: 100%;
+}
+
+body {
+    background-color: rgb(255, 255, 255);
+    font-family: Verdana, Geneva, Arial, sans-serif; 
+    box-shadow: rgb(20, 20, 20) 20px 0px 20px,  rgb(20, 20, 20) -20px 0px 20px,
+                inset rgb(10, 10, 10) 0px 0px 10px;
+    border-left: 3px solid rgb(20, 20, 20);
+    border-right: 3px solid rgb(20, 20, 20);
+    min-height: 100%;  
+    margin: 0px auto;
+    min-width: 320px;
+    max-width: 1020px;  
+    width: 100%;
+}
+
+/*
+header {
+    border-bottom: 1px solid rgb(0, 0, 0);
+}
+*/
+
+#logoimg
+{
+    float: left;
+}
+
+header h6 {
+    width: 100%;
+    font-size: 6em;
+    background-image: url("shoe2.png");
+    padding: 8px;
+    border-top: 5mm solid black;
+    box-shadow: inset  -5px 10px 0px rgb(0, 0, 0);
+    border-bottom: 7mm solid black;
+    border-left: 1mm solid black;
+    color: rgba(0, 0, 0, 0);
+}
+
+header nav ul {
+    background-color: rgb(67,110,209);
+    list-style-type: none;
+    margin: 0;
+    padding: 5px;
+    border-top: 1mm solid black;
+    box-shadow: inset 0 5px 15px 0px rgba(0, 0, 0, 0.75);
+    text-align: center;
+    width: 100%;
+    overflow: auto;
+    
+}
+header nav ul li {
+    font-size: 1.2em;
+    line-height: 2.3em;
+    display: inline;
+    height: 2.3em;
+    padding: 0px 15px 0px 15px;
+}
+header nav ul li a {
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+    padding: 5px;
+    width: 12.5%;
+    text-align: center;
+   
+}
+header nav ul li a:hover {
+    background-color: #f62f5e;
+    color:#fff;
+    text-decoration: none;
+    border-radius: 30px;
+}
+header nav ul li a:active {
+    background-color: rgb(168, 207, 95);
+    text-decoration: none;
+}
+
+fieldset 
+{
+    height: 650px;
+    line-height: 30px;
+}
+
+fieldset legend
+{
+    text-align: center;
+    background: rgb(67, 110, 209);
+    border-top: 1mm solid black;
+    box-shadow: inset 0 5px 15px 0px rgba(0, 0, 0, 0.75);
+    padding: 10px 0px;
+    width: 100%;
+    font-weight: bold;
+    line-height: 20px;
+}
