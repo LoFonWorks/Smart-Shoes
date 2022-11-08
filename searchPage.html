@@ -4,38 +4,50 @@
         <!--
             Smart Shoes Search Page HTML
             Author: Logan Fontenot
-            Date:   11/2/22
+            Date:   11/7/22
 
             Filename:   searchPage.html
-
         -->
+
         <meta charset="utf-8" />
-        <title>Search Page</title>
-        <link href="searchPage.css" rel="stylesheet"/>
-        <link href="searchPageFormating.css" rel="stylesheet"/>
+        <title>Smart Shoes</title>
+        <link href="searchPage.css" rel="stylesheet"/> <!--External Style sheet-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+        <!--Embedded style sheet-->
+        <style>
+            footer {
+                clear: both;
+                border-top: 1mm solid black;
+                box-shadow: inset 0 5px 15px 0px rgba(0, 0, 0, 0.75);
+                background-color: rgb(67, 110, 209);
+                font-size: 0.9em;
+                padding: 10px 0px;
+                text-align: center;
+            }
+        </style>
     </head>
 
     <body>
         <header>
-            <a href="home.html"><img src="shoe.png" alt="Smart Shoes" id="logoimg"/></a>
-            <h6>
+            <a href="home.html"><img src="shoe.png" alt="Smart Shoes" id="logoimg"/></a> <!--Smart Shoes logo-->
+            <h6> <!--Code for the smart shoes picture to the right of the logo. Uses a clever sizing technique using the periods to ceter the picture.-->
             ..
             </h6>
-            <nav>
+            <nav> <!--Nav bar-->
                 <ul>
                     <li><a href="home.html">Home</a></li>
                     <li><a href="searchPage.html">Men</a></li>
                     <li><a href="searchPage.html">Women</a></li>
                     <li><a href="searchPage.html">Kids</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                    <li><a href="#">Sign In</a></li>
+                    <li><a href="contactPage.html">Chat</a></li>
                     <li><a href="paymentPage.html">My Cart</a></li>
                 </ul>
             </nav>
         </header>
 
         <div>
-            <div class="col-1-3">
+            <div class="col-1-3"> <!--Filters. Currently unresponsive until backend completed-->
                 <fieldset id="pickupInfo">
                     <legend>Filters</legend>
                     <b>Gender</b>
@@ -69,18 +81,27 @@
                                 <td id="price3">500</td>
                             </tr>
                         </table>
-                        <button type="button">Apply Filters</button>
+                        
+                        <button type="button" id="filterButton">Apply Filters</button>
+
+                        <script> //JQuery Code
+                            $(document).ready(function () {
+                                $("#filterButton").click(function () {
+                                    alert("Your filters have been applied.");
+                                });
+                            });
+                        </script>
                     </div>
                 </fieldset>
             </div>
 
-            <div class="col-2-3">
-                <div class="searchbar">
+            <div class="col-2-3"> <!--Second half of the screen with searchbar and products-->
+                <div class="searchbar"> <!--Searchbar-->
                     <input type="text" placeholder="Search..." name="search">
                     <button type="submit">Submit</button>
                 </div>
 
-                <div class="searchResults">
+                <div class="searchResults"> <!--Products-->
                     <h1>Products</h1>
                     <div class="item1">
                         <img src="popular1.jpg"/>
@@ -90,8 +111,8 @@
                             <input id="item1Quanity" type="number" value="1"  min="1" max="10"/>
                         </div>
                         <div class="purchaseButtons1">
-                            <button type="button" class="addButton1">Add to Cart</button>
-                            <button type="button" class="buyButton1">Buy Now</button>
+                            <button type="button" class="addButton">Add to Cart</button>
+                            <button type="button" class="buyButton">Buy Now</button>
                         </div>
                     </div>
                     <div class="item2">                        
@@ -102,8 +123,8 @@
                             <input id="item2Quanity" type="number" value="1"  min="1" max="10"/>
                         </div>
                         <div class="purchaseButtons2">
-                            <button type="button" class="addButton2">Add to Cart</button>
-                            <button type="button" class="buyButton2">Buy Now</button>
+                            <button type="button" class="addButton">Add to Cart</button>
+                            <button type="button" class="buyButton">Buy Now</button>
                         </div>
                     </div>
                     <div class="item3">
@@ -114,20 +135,20 @@
                             <input id="item3Quanity" type="number" value="1"  min="1" max="10"/>
                         </div>
                         <div class="purchaseButtons3">
-                            <button type="button" class="addButton3">Add to Cart</button>
-                            <button type="button" class="buyButton3">Buy Now</button>
+                            <button type="button" class="addButton">Add to Cart</button>
+                            <button type="button" class="buyButton">Buy Now</button>
                         </div>
                     </div>
                     <div class="item4">
                         <img src="popular4.jpg"/>
                         <div class="purchaseInfo4"> 
                             <b>Dress Shoes</b>  
-                            <p>$50/Pair</p>                         
+                            <p style="color:green">$50/Pair</p> <!--Inline CSS-->                      
                             <input id="item4Quanity" type="number" value="1"  min="1" max="10"/>
                         </div>
                         <div class="purchaseButtons4">
-                            <button type="button" class="addButton4">Add to Cart</button>
-                            <button type="button" class="buyButton4">Buy Now</button>
+                            <button type="button" class="addButton">Add to Cart</button>
+                            <button type="button" class="buyButton">Buy Now</button>
                         </div>
                     </div>
                     <div class="item5">
@@ -138,8 +159,8 @@
                             <input id="item5Quanity" type="number" value="1"  min="1" max="10"/>
                         </div>
                         <div class="purchaseButtons5">
-                            <button type="button" class="addButton5">Add to Cart</button>
-                            <button type="button" class="buyButton5">Buy Now</button>
+                            <button type="button" class="addButton">Add to Cart</button>
+                            <button type="button" class="buyButton">Buy Now</button>
                         </div>
                     </div>
                     <div class="item6">
@@ -150,8 +171,8 @@
                             <input id="item6Quanity" type="number" value="1"  min="1" max="10"/>
                         </div>
                         <div class="purchaseButtons6">
-                            <button type="button" class="addButton6">Add to Cart</button>
-                            <button type="button" class="buyButton6">Buy Now</button>
+                            <button type="button" class="addButton">Add to Cart</button>
+                            <button type="button" class="buyButton">Buy Now</button>
                         </div>
                     </div>
                     <div class="item7">
@@ -162,8 +183,8 @@
                             <input id="item7Quanity" type="number" value="1"  min="1" max="10"/>
                         </div>
                         <div class="purchaseButtons7">
-                            <button type="button" class="addButton7">Add to Cart</button>
-                            <button type="button" class="buyButton7">Buy Now</button>
+                            <button type="button" class="addButton">Add to Cart</button>
+                            <button type="button" class="buyButton">Buy Now</button>
                         </div>
                     </div>
                     <div class="item8">
@@ -174,8 +195,8 @@
                             <input id="item8Quanity" type="number" value="1"  min="1" max="10"/>
                         </div>
                         <div class="purchaseButtons8">
-                            <button type="button" class="addButton8">Add to Cart</button>
-                            <button type="button" class="buyButton8">Buy Now</button>
+                            <button type="button" class="addButton">Add to Cart</button>
+                            <button type="button" class="buyButton">Buy Now</button>
                         </div>
                     </div>
                     <div class="item9">
@@ -186,8 +207,8 @@
                             <input id="item9Quanity" type="number" value="1"  min="1" max="10"/>
                         </div>
                         <div class="purchaseButtons9">
-                            <button type="button" class="addButton9">Add to Cart</button>
-                            <button type="button" class="buyButton9">Buy Now</button>
+                            <button type="button" class="addButton">Add to Cart</button>
+                            <button type="button" class="buyButton">Buy Now</button>
                         </div>
                     </div>
                     <div class="item10">
@@ -198,15 +219,24 @@
                             <input id="item10Quanity" type="number" value="1"  min="1" max="10"/>
                         </div>
                         <div class="purchaseButtons10">
-                            <button type="button" class="addButton10">Add to Cart</button>
-                            <button type="button" class="buyButton10">Buy Now</button>
+                            <button type="button" class="addButton">Add to Cart</button>
+                            <button type="button" class="buyButton">Buy Now</button>
                         </div>
                     </div>
+
+                    <script type="text/javascript"> //Javascript code
+                        for (var addCart of document.getElementsByClassName('addButton'))
+                            addCart.addEventListener("click", cartClick);
+
+                        function cartClick() {
+                            alert("Item added to cart.");
+                        }
+                    </script>
                 </div>
             </div>
         </div>
 
-        <footer>
+        <footer> <!--Small footer for extra flavor-->
             Smart Shoes &copy; 2022 All Rights Reserved
         </footer>
     </body>

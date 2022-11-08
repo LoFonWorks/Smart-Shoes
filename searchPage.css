@@ -1,7 +1,7 @@
 /*
     Smart Shoes Search Page CSS
     Author: Logan Fontenot
-    Date:   11/2/22  
+    Date:   11/7/22  
 
     Filename: seachPage.css
 */
@@ -107,6 +107,29 @@ header nav ul li a:hover {
 header nav ul li a:active {
     background-color: rgb(168, 207, 95);
     text-decoration: none;
+}
+
+.dropdown 
+{
+    display: inline-block;
+    position: relative;
+}
+
+#contact
+{
+    border: none;
+    border-radius: 5px;
+    padding: 15px 30px;
+    font-size: 18px;
+}
+
+.dropdown-options
+{
+    display: none;
+    position: absolute;
+    overflow: auto;
+    background: #fff;
+    border-radius: 5px;
 }
 
 fieldset 
@@ -251,21 +274,17 @@ div[class^="item"] div[class^="purchaseButtons"]
 div[class^="item"] div[class^="purchaseButtons"] button,
 fieldset div button
 {
-    font-size: 1em;
     border-radius: 20px;
-    padding: .5em .5em;
+    padding: .65em 1.6em;
     align-self: center;
-    background-color: blue;
+    background-color: #f62f5e;
     color: #fff;
 }
 
 div[class^="item"] div[class^="purchaseButtons"] button:hover,
 fieldset div button:hover 
 {
-    background-color: #f62f5e;
-    color:#fff;
-    text-decoration: none;
-    border-radius: 30px;
+    color:rgb(108, 73, 177);
 }
 
 div[class^="item"] div[class^="purchaseButtons"] button:active,
@@ -275,12 +294,3 @@ fieldset div button:active
     text-decoration: none;
 }
 
-footer {
-    clear: both;
-    border-top: 1mm solid black;
-    box-shadow: inset 0 5px 15px 0px rgba(0, 0, 0, 0.75);
-	background-color: rgb(67, 110, 209);
-	font-size: 0.9em;
-	padding: 10px 0px;
-    text-align: center;
-}
