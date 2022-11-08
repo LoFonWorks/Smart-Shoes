@@ -52,7 +52,6 @@ header {
     width: 14.89%;
     text-align: center;
 }
-
 .subbut{
     font-weight: bold;
     color: black;
@@ -65,8 +64,8 @@ header {
     background-color: transparent;
     border:none;
     font-size: 1em;
+    
 }
-
 .navbar #a1:hover, .subnav:hover .subbut{
     background-color: #f62f5e;
     color:#fff;
@@ -74,6 +73,7 @@ header {
     border-radius: 30px;
     padding: .20em 0.2em;
 }
+
 .content {
    display: none;
    position:absolute;
