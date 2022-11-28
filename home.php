@@ -23,7 +23,7 @@
             <a id ="a1" href="searchPage.php">Men</a>
             <a id="a1" href="searchPage.php">Woman</a>
             <a id="a1" href="searchPage.php">Kids</a>
-            <a id="a1" href="paymentPage.html">Cart</a>
+            <a id="a1" href="paymentPage.php">Cart</a>
             <div class="subnav">
                 <button class="subbut">Contact<i class="fa fa-caret-down"></i></button>
                 <div class="content">
