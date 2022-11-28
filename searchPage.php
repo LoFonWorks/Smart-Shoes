@@ -29,7 +29,13 @@
     </head>
 
     <body>
-        <?php include 'databaseConnection.php'; ?>
+        <?php 
+            include 'databaseConnection.php'; 
+            require_once('db_utils.php');
+            if(array_key_exists('item_id', $_POST)) {
+                add_item_to_cart($_POST['item_id'], 1);
+            }
+        ?>
     
         <header>
             <a href="home.php"><img src="shoe.png" alt="Smart Shoes" id="logoimg"/></a> <!--Smart Shoes logo-->
@@ -144,20 +150,40 @@
                             if(mysqli_num_rows($result) > 0)
                             {
                                 while($row = mysqli_fetch_array($result)) 
-                                {   ?>
-                                    <div class="item">
-                                        <img src="<?php echo $row['shoeArtifact'] ?>"/>
-                                        <div class="purchaseInfo">
-                                            <b><?php echo $row['name'] ?></b>
-                                            <p><?php echo $row['cost'] ?></p>
-                                            <input id="itemQuanity" type="number" value="1"  min="1" max="10"/>
+                                { 
+                                    echo "
+                                    <div class='item'>
+                                        <img src='{$row['shoeArtifact']}'/>
+                                        <div class='purchaseInfo'>
+                                            <b>{$row['name']}</b>
+                                            <p>{$row['cost']}$/Pair</p>
+                                            <input id='itemQuanity' type='number' value='1'  min='1' max='10'/>
                                         </div>
-                                        <div class="purchaseButtons">
-                                            <button type="button" class="addButton">Add to Cart</button>
-                                            <button type="button" class="buyButton">Buy Now</button>
+                                        <div class='purchaseButtons'>
+                                            <form method='post' id='item-form-{$row['id']}'>
+                                                <button type='button' name='add_button' value='add_button' class='addButton' id='item-btn-{$row['id']}'>Add to Cart</button>
+                                                <input type='hidden' id='item_id' name='item_id' value='{$row['id']}'/>
+                                            </form>
+                                            <form method='post' id='instant-buy-form-{$row['id']}' action='paymentPage.php'>
+                                                <input type='hidden' id='instant_buy' name='instant_buy' value='{$row['id']}'/>
+                                                <button type='button' name='instant_buy' id='instant-buy-btn-{$row['id']}' class='buyButton'>Buy Now</button>
+                                            </form>
                                         </div>
                                     </div>
-                    <?php       }
+                                    
+                                    <script>
+                                        document.getElementById('item-btn-{$row['id']}').addEventListener('click', () => {
+                                            document.getElementById('item-form-{$row['id']}').submit();
+                                        });
+
+                                        document.getElementById('instant-buy-btn-{$row['id']}').addEventListener('click', () => {
+                                            document.getElementById('instant-buy-form-{$row['id']}').submit();
+                                        });
+
+                                    </script>
+
+                                    ";    
+                                }
                             }
                             else
                             {   ?>
@@ -176,36 +202,47 @@
                             if($age != 'none')
                                 $subQuery .= " AND age = '$age'";
 
-                            $filterQuery = "SELECT name, cost, shoeArtifact 
+                            $filterQuery = "SELECT id, name, cost, shoeArtifact 
                                             FROM shoes" . $subQuery;
                             $filterResult = mysqli_query($con, $filterQuery);
 
                             if(mysqli_num_rows($filterResult) > 0)
                             {
                                 while($row = mysqli_fetch_array($filterResult)) 
-                                {   ?>
-                                    <div class="item">
-                                        <img src="<?php echo $row['shoeArtifact'] ?>"/>
-                                        <div class="purchaseInfo">
-                                            <b><?php echo $row['name'] ?></b>
-                                            <p><?php echo $row['cost'] ?></p>
-                                            <input id="itemQuanity" type="number" value="1"  min="1" max="10"/>
+                                {   
+                                    echo "
+                                    <div class='item'>
+                                        <img src='{$row['shoeArtifact']}'/>
+                                        <div class='purchaseInfo'>
+                                            <b>{$row['name']}</b>
+                                            <p>{$row['cost']}$/Pair</p>
+                                            <input id='itemQuanity' type='number' value='1'  min='1' max='10'/>
                                         </div>
-                                        <div class="purchaseButtons">
-                                            <!--
-                                            <button type="button" class="addButton">Add to Cart</button>
-                                            <button type="button" class="buyButton">Buy Now</button> -->
-                                            <form method='post' id='item-form-{<?php echo $row['id'] ?>}'>
-                                                <button type='button' name='add_button' value='add_button' class='addButton' id='item-btn-{<?php echo $row['id'] ?>}'>Add to Cart</button>
-                                                <input type='hidden' id='item_id' name='item_id' value='{<?php echo $row['id'] ?>}'/>
+                                        <div class='purchaseButtons'>
+                                            <form method='post' id='item-form-{$row['id']}'>
+                                                <button type='button' name='add_button' value='add_button' class='addButton' id='item-btn-{$row['id']}'>Add to Cart</button>
+                                                <input type='hidden' id='item_id' name='item_id' value='{$row['id']}'/>
                                             </form>
-                                            <form method='post' id='instant-buy-form-{<?php echo $row['id'] ?>}' action='paymentPage.php'>
-                                                <input type='hidden' id='instant_buy' name='instant_buy' value='{<?php echo $row['id'] ?>}'/>
-                                                <button type='button' name='instant_buy' id='instant-buy-btn-{<?php echo $row['id'] ?>}' class='buyButton'>Buy Now</button>
+                                            <form method='post' id='instant-buy-form-{$row['id']}' action='paymentPage.php'>
+                                                <input type='hidden' id='instant_buy' name='instant_buy' value='{$row['id']}'/>
+                                                <button type='button' name='instant_buy' id='instant-buy-btn-{$row['id']}' class='buyButton'>Buy Now</button>
                                             </form>
                                         </div>
                                     </div>
-                        <?php   }
+                                    
+                                    <script>
+                                        document.getElementById('item-btn-{$row['id']}').addEventListener('click', () => {
+                                            document.getElementById('item-form-{$row['id']}').submit();
+                                        });
+
+                                        document.getElementById('instant-buy-btn-{$row['id']}').addEventListener('click', () => {
+                                            document.getElementById('instant-buy-form-{$row['id']}').submit();
+                                        });
+
+                                    </script>
+
+                                    ";      
+                                }
                             }
                             else
                             {   ?>
