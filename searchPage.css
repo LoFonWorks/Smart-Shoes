@@ -177,7 +177,7 @@ fieldset legend
 
 #price
 {
-    width: 90%;
+    width: 95%;
 }
 
 table
@@ -261,25 +261,25 @@ div.col-2-3
     top: 0;
 }
 
-div[class^="item"]
+.item
 {
     height: 200px;
     border-bottom: 1px solid black;
 }
 
-div[class^="item"] img
+.item img
 {
     float: left;
     width: 40%;
     min-height: 100%;
 }
 
-div[class^="item"] div
+.item div
 {
     width: 60%;
 }
 
-div[class^="item"] div[class^="purchaseInfo"]
+.item div.purchaseInfo
 {
     float: left;
     width: 35%;
@@ -287,7 +287,7 @@ div[class^="item"] div[class^="purchaseInfo"]
     padding: 40px;
 }
 
-div[class^="item"] div[class^="purchaseButtons"]
+.item div.purchaseButtons
 {
     float: right;
     width: 25%;
@@ -296,7 +296,7 @@ div[class^="item"] div[class^="purchaseButtons"]
     padding-left: 0px;
 }
 
-div[class^="item"] div[class^="purchaseButtons"] button,
+.item div.purchaseButtons button,
 fieldset div button
 {
     border-radius: 20px;
@@ -306,16 +306,15 @@ fieldset div button
     color: #fff;
 }
 
-div[class^="item"] div[class^="purchaseButtons"] button:hover,
+.item div.purchaseButtons button:hover,
 fieldset div button:hover 
 {
     color:rgb(108, 73, 177);
 }
 
-div[class^="item"] div[class^="purchaseButtons"] button:active,
+.item div.purchaseButtons button:active,
 fieldset div button:active 
 {
     background-color: rgb(168, 207, 95);
     text-decoration: none;
 }
-
