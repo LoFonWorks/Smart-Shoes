@@ -1,0 +1,468 @@
+/*
+Smart Shoes payment Page css
+Author: Muhammad Shazad Yousufzai Pathan
+Date:   11/2/22
+Filename:   paymentPage.php
+*/
+        
+
+* {
+    font-family: Champagne, cursive;
+}
+html {
+    background-color: rgb(45, 58, 87);
+    height: 100%;
+}
+
+/*body {
+    margin: 0px;
+    padding: 0px;
+    background-color:white;
+}*/
+body {
+    background-color: rgb(255, 255, 255); 
+    box-shadow: rgb(20, 20, 20) 20px 0px 20px,  rgb(20, 20, 20) -20px 0px 20px,
+                inset rgb(10, 10, 10) 0px 0px 10px;
+    border-left: 3px solid rgb(20, 20, 20);
+    border-right: 3px solid rgb(20, 20, 20);
+    min-height: 100%;  
+    margin: 0px auto;
+    min-width: 320px;
+    max-width: 1100px;  
+    width: 100%;
+}
+header {
+    border-bottom: 1px solid rgb(0, 0, 0);
+    background-color:black;
+    color: black;
+}
+.navbar{
+    background-color: rgb(67,110,209);
+    list-style-type: none;
+    margin: 0;
+    padding: 5px;
+    border-top: 1mm solid black;
+    box-shadow: inset 0 5px 15px 0px rgba(0, 0, 0, 0.75);
+    text-align: center;
+    width: 99.89%;
+    overflow: hidden; 
+    font-size: 1.5em;
+}
+.navbar a{
+    font-weight: bold;
+    color: black;
+    width: 100%;
+    text-decoration: none;
+    float: left;
+    padding: 5px;
+    width: 14.89%;
+    text-align: center;
+}
+.subnav{
+    font-weight: bold;
+    color: black;
+    width: 100%;
+    text-decoration: none;
+    float: left;
+    padding: 5px;
+    width: 14.89%;
+    text-align: center;
+}
+.subbut{
+    font-weight: bold;
+    color: black;
+    width: 100%;
+    text-decoration: none;
+    float: none;
+    padding: 5px;
+    width: 100%;
+    text-align: center;
+    background-color: transparent;
+    border:none;
+    font-size: 1em;
+    
+}
+.navbar #a1:hover, .subnav:hover .subbut{
+    background-color: #f62f5e;
+    color:#fff;
+    text-decoration: none;
+    border-radius: 30px;
+    padding: .20em 0.2em;
+}
+
+.content {
+   display: none;
+   position:absolute;
+   background-color: blue;
+   width: 20%;
+   text-align:left;
+   cursor: pointer;
+   border-radius: 30px;
+}
+.content #p1{
+    color: white;
+    text-decoration: none;
+}
+.content #p1 a{
+    color: white;
+    text-decoration: none;
+}
+.content #p1:hover{
+    background-color: #f62f5e;
+    color:black;
+    border-radius: 10px;
+    padding: 5px;
+}
+.subnav:hover .content{
+    display:block;
+    white-space: nowrap;
+    font-size: 0.7em
+}
+.subnav:hover{
+    text-decoration: none;
+}
+
+body header h6 {
+    float:right;
+    width: 60%;
+    font-size: 6em;
+    background-image: url("shoe2.png");
+    margin-top: 0px;
+    margin-bottom:0px;
+    padding: 5.7px;
+    border-top: 5mm solid black;
+    box-shadow: inset  -5px 10px 0px rgb(0, 0, 0);
+    border-bottom: 7mm solid black;
+    border-left: 1mm solid black;
+    text-align:center;
+    
+}
+/*payment cards */
+
+.payment-card-info {
+    display: inline-flex;
+    align-items: flex-start;
+}
+
+.payment-card-info #card-wrapper {
+    height: 480px;
+    width: 30em;
+    background: rgba(255, 253, 208, 0.9);
+    border: 1px solid grey;
+    border-radius: 10px;
+    margin: 3em 2em 3em 3em;
+    overflow:hidden;
+    
+}
+/* box-shadow: 0px 2px 25px #000; */
+
+.payment-card-info .row {
+    display:flex;
+    justify-content: center;
+}
+
+.payment-card-info .row:nth-of-type(1) .col-xs-5 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #e6e6e6;
+    /*   border:solid 1px transparent; */
+    border-radius: 4px;
+    margin: 1em 5px;
+    padding: 1%;
+}
+
+.payment-card-info .row:nth-of-type(1) .col-xs-5 #cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.payment-card-info .row:nth-of-type(1) .col-xs-5 #cards img {
+    width: 100px;
+    height: 100px;
+}
+
+.payment-card-info .row:nth-of-type(2) .col-xs-5 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-basis: 45%;
+}
+
+.payment-card-info .row:nth-of-type(2) .col-xs-5 input {
+    border: 2px solid lightgrey;
+    height: 35px;
+    border-radius: 10px;
+    padding-left: 10px;
+    margin: 5px;
+}
+
+.payment-card-info .row .col-xs-5 input:focus,
+.payment-card-info .row:nth-of-type(3) .col-xs-2 input:focus {
+    border-color: green;
+    outline: 0;
+}
+
+.payment-card-info .row-three {
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+    align-content: space-between;
+    margin: 2em 1em 2.4em 1em;
+}
+
+.payment-card-info .row:nth-of-type(3) .col-xs-2 {
+    flex-basis: 50%;
+}
+
+.payment-card-info .row:nth-of-type(3) .col-xs-5 {
+    flex-basis: 40%;
+    align-items: baseline;
+}
+
+.payment-card-info .row:nth-of-type(3) .col-xs-2 input {
+    height: 35px;
+    border: 2px solid lightgrey;
+    border-radius: 10px;
+    padding-left: 10px;
+}
+
+.payment-card-info .row:nth-of-type(3) .col-xs-5 .small {
+    font-size: .70em;
+}
+
+.payment-card-info footer {
+    height: 80px;
+    background: blue;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.payment-card-info footer .btn {
+    /* margin: 50px 15px 55px 15px; */
+    border-radius: 20px;
+    padding: .65em 1.6em;
+    align-self: center;
+    background-color: #f62f5e;
+    color: #fff;
+}
+ footer  .btn:hover{
+    color:rgb(108, 73, 177);
+}
+
+.payment-card-info .col-xs-5.highlight {
+    border: solid 1px blue;
+}
+
+/* payment summary */
+
+.payment-card-info #summary-wrapper {
+    height: 480px;
+    width: 31.35em;
+    background: rgba(255, 253, 208, 0.9);
+    border: 1px solid grey;
+    border-radius: 10px;
+    margin: 3em 0 0 0;
+    overflow: hidden;
+    /* box-shadow: 0px 2px 25px #000; */
+}
+
+/** payment summary table */
+
+#summary-wrapper #summary-table-span {
+    display: block;
+    overflow: scroll;
+    height: 75%;
+}
+
+#summary-wrapper table {
+    border-spacing: 1;
+    border-collapse: collapse;
+    background: rgb(255, 255, 255);
+    border-radius: 6px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+#summary-wrapper table * {
+    position: relative;
+}
+
+#summary-wrapper table td,
+#summary-wrapper table th {
+    padding-left: 8px;
+}
+
+#summary-wrapper table thead tr {
+    height: 60px;
+    background: rgb(192, 241, 255);
+    font-size: 16px;
+    
+}
+
+#summary-wrapper table tbody tr {
+    height: 48px;
+    border-bottom: 1px solid #e3f1d5;
+}
+
+#summary-wrapper table tbody tr:last-child {
+    border: 0;
+}
+
+#summary-wrapper table td,
+#summary-wrapper table th {
+    text-align: left;
+}
+
+#summary-wrapper table td.l,
+#summary-wrapper table th.l {
+    text-align: right;
+}
+
+#summary-wrapper table td.c,
+#summary-wrapper table th.c {
+    text-align: center;
+}
+
+#summary-wrapper table td.r,
+#summary-wrapper table th.r {
+    text-align: center;
+}
+
+#summary-wrapper p {
+    display: inline;
+}
+
+#summary-wrapper #summary-total-row {
+    margin: 0.5em 0.5em;
+}
+
+/** item imgs **/
+
+#item-imgs-wrapper {
+    height: 480px;
+    width: 30em;
+    background: rgba(255, 253, 208, 0.9);
+    border: 1px solid grey;
+    border-radius: 10px;
+    margin: 0em 2em 3em 3em;
+    display: block;
+    overflow: hidden;
+}
+
+#item-imgs-wrapper h3 {
+    margin: 1em;
+}
+
+#item-imgs-wrapper #img-table {
+    display: block;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 100%;
+}
+
+#item-imgs-wrapper #img-table * {
+    position: relative;
+    margin: 0.3em;
+}
+
+.product-img {
+    width: 150px;
+}
+
+.product-img-container {
+    width: 150px;
+}
+
+.product-name p {
+    margin-left: 2em;
+    margin-top: 0;
+    font-size: 14px;
+}
+
+#item-imgs-wrapper #img-table table tbody tr {
+    position: relative;
+    width: 100%;
+    border-bottom: 5px solid black;
+}
+
+
+/** related products **/
+
+.imgs-and-related-container {
+    display: inline-flex;
+    align-items: flex-start;
+}
+
+.related-items-wrapper {
+    height: 480px;
+    width: 32em;
+    background: rgba(255, 253, 208, 0.9);
+    border: 1px solid grey;
+    border-radius: 10px;
+    margin: 0 0 0 0;
+    display: block;
+    overflow: hidden;
+}
+
+.related-items-wrapper h3 {
+    margin: 1em;
+}
+
+.related-items-wrapper #related-items-table-container {
+    display: block;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 100%;
+}
+
+.related-items-wrapper #related-items-table-container * {
+    position: relative;
+    margin: 0.5em;
+}
+input[type=button] {
+    border-radius: 20px;
+    padding: .65em 1.6em;
+    align-self: center;
+    background-color: #f62f5e;
+    color: #fff;
+}
+input[type=button]:hover {
+    color:rgb(108, 73, 177);
+}
+#hide{
+    border-radius: 30px;
+    padding: .65em 1.6em;
+    align-self: center;
+    background-color: #f62f5e;
+    color: #fff;
+    
+}
+#show{
+    border-radius: 30px;
+    padding: .65em 1.6em;
+    align-self: center;
+    background-color: #f62f5e;
+    color: #fff;
+}
+#hide:hover{
+    color:rgb(108, 73, 177);
+}
+#show:hover{
+    color:rgb(108, 73, 177);
+}
+
+footer{
+    border-top: 1mm solid black;
+    box-shadow: inset 0 5px 15px 0px rgba(0, 0, 0, 0.75);
+    background-color:  rgb(67,110,209);
+    font-size: 0.9em;
+    padding: 10px 0px;
+    text-align: center;
+}
+
+
