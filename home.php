@@ -20,9 +20,9 @@
         </h6>
         <div class="navbar">
             <a id="a1" href="home.html">Home</a>
-            <a id ="a1" href="searchPage.html">Men</a>
-            <a id="a1" href="searchPage.html">Woman</a>
-            <a id="a1" href="searchPage.html">Kids</a>
+            <a id ="a1" href="searchPage.php">Men</a>
+            <a id="a1" href="searchPage.php">Woman</a>
+            <a id="a1" href="searchPage.php">Kids</a>
             <a id="a1" href="paymentPage.html">Cart</a>
             <div class="subnav">
                 <button class="subbut">Contact<i class="fa fa-caret-down"></i></button>
@@ -37,11 +37,11 @@
         </div>
     </header>
     <div class="searchbar">
-        <form>
-            <label for="search-box">
-                <input type="text" placeholder="Search..." name="search" id="search-box">
-            </label>
-            <button type="submit">Submit</button>
+        <form action="searchPage.php" method="GET">
+            <div class="searchbar"> <!--Searchbar-->
+                <input type="text" placeholder="Search..." name="search" value="<?php if(isset($_GET['search'])){echo $_GET['search'];} ?>">
+                <button type="submit">Submit</button>
+            </div>
         </form>
     </div>
     <div class="picture">
