@@ -44,9 +44,9 @@
             </h6>
             <div class="navbar">
                 <a id="a1" href="home.php">Home</a>
-                <a id ="a1" href="searchPage.php">Men <script>document.getElementById('men').click(); document.getElementById('ageNone').click();</script></a>
-                <a id="a1" href="searchPage.php">Woman <script>document.getElementById('women').click(); document.getElementById('ageNone').click();</script></a>
-                <a id="a1" href="searchPage.php">Kids <script>document.getElementById('genderNone').click(); document.getElementById('children').click();</script></a>
+                <a id ="a1" href="searchPage.php?filter=men">Men <script>document.getElementById('men').click(); document.getElementById('ageNone').click();</script></a>
+                <a id="a1" href="searchPage.php?filter=women">Woman <script>document.getElementById('women').click(); document.getElementById('ageNone').click();</script></a>
+                <a id="a1" href="searchPage.php?filter=kids">Kids <script>document.getElementById('genderNone').click(); document.getElementById('children').click();</script></a>
                 <a id="a1" href="paymentPage.php">Cart</a>
                 <div class="subnav">
                     <button class="subbut">Contact<i class="fa fa-caret-down"></i></button>
@@ -121,6 +121,32 @@
                                     document.getElementById('genderNone').click();
                                     document.getElementById('ageNone').click();
                                     document.getElementById('price').value = 275;
+                                }
+                            </script>
+                            <!--Script to get the "?filter=" part of the URL and then sets the radio button in the filter menu correctly-->
+                            <script>
+                                var getUrlParameter = function getUrlParameter(sParam) {
+                                    var sPageURL = window.location.search.substring(1),
+                                        sURLVariables = sPageURL.split('?'),
+                                        sParameterName,
+                                        i;
+
+                                    for (i = 0; i < sURLVariables.length; i++) {
+                                        sParameterName = sURLVariables[i].split('=');
+
+                                        if (sParameterName[0] === sParam) {
+                                            return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+                                        }
+                                    }
+                                };
+
+                                var defaultRadioPlan = getUrlParameter('filter');
+                                if(defaultRadioPlan === 'men'){
+                                    $('#men').attr("checked", true);
+                                } else if(defaultRadioPlan === 'women'){
+                                    $('#women').attr("checked", true);
+                                } else if(defaultRadioPlan === 'kids'){
+                                    $('#children').attr("checked", true);
                                 }
                             </script>
                         </div>

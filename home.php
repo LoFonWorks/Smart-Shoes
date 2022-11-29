@@ -10,19 +10,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>Smart Shoes</title>
     <link href="home.css" rel="stylesheet">
-    <script src="home.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
+<?php include 'databaseConnection.php'; ?>
     <header>
         <a href="home.html"><img src="shoe.png" alt="Smart Shoes" id="logoimg"/></a>
         <h6>
         ..
         </h6>
         <div class="navbar">
-            <a id="a1" href="home.html">Home</a>
-            <a id ="a1" href="searchPage.php">Men</a>
-            <a id="a1" href="searchPage.php">Woman</a>
-            <a id="a1" href="searchPage.php">Kids</a>
+            <a id="a1" href="home.php">Home</a>
+            <a id ="a1" href="searchPage.php?filter=men">Men</a>
+            <a id="a1" href="searchPage.php?filter=women">Woman</a>
+            <a id="a1" href="searchPage.php?filter=kids">Kids</a>
             <a id="a1" href="paymentPage.php">Cart</a>
             <div class="subnav">
                 <button class="subbut">Contact<i class="fa fa-caret-down"></i></button>
@@ -52,16 +53,16 @@
     </div>
     <div class="row">
         <div class="column">
-            <a href="searchPage.html"><img src="popular1.jpg" style="width:100%"></a>
+            <a href="searchPage.php"><img src="popular1.jpg" style="width:100%"></a>
         </div>
         <div class="column">
-            <a href="searchPage.html"><img src="popular2.jpg" style="width:100%"></a>
+            <a href="searchPage.php"><img src="popular2.jpg" style="width:100%"></a>
         </div>
         <div class="column">
-            <a href="searchPage.html"><img src="popular3.jpg" style="width:100%"></a>
+            <a href="searchPage.php"><img src="popular3.jpg" style="width:100%"></a>
         </div>
         <div class="column">
-            <a href="searchPage.html"><img src="popular4.jpg" style="width:100%"></a>
+            <a href="searchPage.php"><img src="popular4.jpg" style="width:100%"></a>
         </div>
     </div>
     <footer>
