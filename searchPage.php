@@ -36,7 +36,7 @@
                 add_item_to_cart($_POST['item_id'], 1);
             }
         ?>
-    
+
         <header>
             <a href="home.php"><img src="shoe.png" alt="Smart Shoes" id="logoimg"/></a> <!--Smart Shoes logo-->
             <h6> <!--Code for the smart shoes picture to the right of the logo. Uses a clever sizing technique using the periods to ceter the picture.-->
@@ -44,15 +44,15 @@
             </h6>
             <div class="navbar">
                 <a id="a1" href="home.php">Home</a>
-                <a id ="a1" href="searchPage.php?filter=men">Men <script>document.getElementById('men').click(); document.getElementById('ageNone').click();</script></a>
-                <a id="a1" href="searchPage.php?filter=women">Woman <script>document.getElementById('women').click(); document.getElementById('ageNone').click();</script></a>
-                <a id="a1" href="searchPage.php?filter=kids">Kids <script>document.getElementById('genderNone').click(); document.getElementById('children').click();</script></a>
+                <a id ="a1" href="searchPage.php?filter=men">Men</a>
+                <a id="a1" href="searchPage.php?filter=women">Woman</a>
+                <a id="a1" href="searchPage.php?filter=kids">Kids</a>
                 <a id="a1" href="paymentPage.php">Cart</a>
                 <div class="subnav">
                     <button class="subbut">Contact<i class="fa fa-caret-down"></i></button>
                     <div class="content">
                         <ul>
-                        <li id="p1">Phone: 337-666-000</li>
+                        <li id="p1">Phone: 337-666-0000</li>
                         <li id="p1">Email: smartshoe@webmail.com</li>
                         <li id="p1"><a href="contactPage.html">Ticket Submission</a></li>
                     </ul>
@@ -106,7 +106,7 @@
                                 </tr>
                             </table>
                             
-                            <button type="submit" id="filterButton"">Apply Filters</button>
+                            <button type="submit" id="filterButton">Apply Filters</button>
                             <button type="button" id="clearButton" onclick="filterClear()">Clear Filters</button>
 
                             <script> 
@@ -123,33 +123,34 @@
                                     document.getElementById('price').value = 275;
                                 }
                             </script>
+
                             <!--Script to get the "?filter=" part of the URL and then sets the radio button in the filter menu correctly-->
                             <script>
-                                var getUrlParameter = function getUrlParameter(sParam) {
-                                    var sPageURL = window.location.search.substring(1),
-                                        sURLVariables = sPageURL.split('?'),
-                                        sParameterName,
+                                var getUrlParameter = function getUrlParameter(Param) {
+                                    var PageURL = window.location.search.substring(1),
+                                        URLVariables = PageURL.split('?'),
+                                        ParameterName,
                                         i;
 
-                                    for (i = 0; i < sURLVariables.length; i++) {
-                                        sParameterName = sURLVariables[i].split('=');
+                                    for (i = 0; i < URLVariables.length; i++) {
+                                        ParameterName = URLVariables[i].split('=');
 
-                                        if (sParameterName[0] === sParam) {
-                                            return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+                                        if (ParameterName[0] === Param) {
+                                            return ParameterName[1] === undefined ? true : decodeURIComponent(ParameterName[1]);
                                         }
                                     }
                                 };
 
-                                var defaultRadioPlan = getUrlParameter('filter');
-                                if(defaultRadioPlan === 'men'){
+                                var defaultNav = getUrlParameter('filter');
+                                if(defaultNav === 'men'){
                                     $('#men').attr("checked", true);
-                                    $('#filterButton').click()
-                                } else if(defaultRadioPlan === 'women'){
+                                    $('#filterButton').click();
+                                } else if(defaultNav === 'women'){
                                     $('#women').attr("checked", true);
-                                    $('#filterButton').click()
-                                } else if(defaultRadioPlan === 'kids'){
+                                    $('#filterButton').click();
+                                } else if(defaultNav === 'kids'){
                                     $('#children').attr("checked", true);
-                                    $('#filterButton').click()
+                                    $('#filterButton').click();
                                 }
                             </script>
                         </div>

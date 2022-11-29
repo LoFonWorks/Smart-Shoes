@@ -242,7 +242,7 @@ div.col-2-3
     color: #fff;
 }
 
-.searchResults 
+.searchResults
 {
     position: relative;
     height: 590px;
@@ -274,7 +274,8 @@ div.col-2-3
 {
     float: left;
     width: 40%;
-    min-height: 100%;
+    min-height: 95%;
+    max-height: 98%;
 }
 
 .item div
