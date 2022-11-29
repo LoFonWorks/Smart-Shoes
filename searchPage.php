@@ -143,10 +143,13 @@
                                 var defaultRadioPlan = getUrlParameter('filter');
                                 if(defaultRadioPlan === 'men'){
                                     $('#men').attr("checked", true);
+                                    $('#filterButton').click()
                                 } else if(defaultRadioPlan === 'women'){
                                     $('#women').attr("checked", true);
+                                    $('#filterButton').click()
                                 } else if(defaultRadioPlan === 'kids'){
                                     $('#children').attr("checked", true);
+                                    $('#filterButton').click()
                                 }
                             </script>
                         </div>
