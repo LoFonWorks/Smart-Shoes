@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 27, 2022 at 01:18 AM
--- Server version: 10.4.27-MariaDB
--- PHP Version: 8.1.12
+-- Generation Time: Nov 30, 2022 at 05:06 AM
+-- Server version: 10.4.24-MariaDB
+-- PHP Version: 7.4.29
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -32,7 +32,7 @@ CREATE TABLE `cart` (
   `user_id` int(11) NOT NULL,
   `item_id` int(11) NOT NULL,
   `quantity` int(11) NOT NULL DEFAULT 1
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -42,11 +42,11 @@ CREATE TABLE `cart` (
 
 CREATE TABLE `shoes` (
   `id` int(11) NOT NULL,
-  `name` varchar(255) DEFAULT NULL,
-  `gender` varchar(255) DEFAULT NULL,
-  `age` varchar(255) DEFAULT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `gender` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `age` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `cost` int(11) DEFAULT NULL,
-  `shoeArtifact` varchar(255) DEFAULT NULL
+  `shoeArtifact` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -54,16 +54,16 @@ CREATE TABLE `shoes` (
 --
 
 INSERT INTO `shoes` (`id`, `name`, `gender`, `age`, `cost`, `shoeArtifact`) VALUES
-(1, 'Men Sneakers', 'male', 'adult', 100, '/Images/popular1.jpg'),
-(2, 'Men Sneakers', 'male', 'adult', 120, '/Images/popular2.jpg'),
-(3, 'Dress Shoes', 'male', 'adult', 55, '/Images/popular3.jpg'),
-(4, 'Dress Shoes', 'male', 'adult', 50, '/Images/popular4.jpg'),
-(5, 'High Heels', 'female', 'adult', 200, '/Images/Female Shoes 1.jpg'),
-(6, 'High Heels', 'female', 'adult', 50, '/Images/Female Shoes 2.jpg'),
-(7, 'High Heels', 'female', 'adult', 150, '/Images/Female Shoes 3.jpg'),
-(8, 'High Heels', 'female', 'adult', 300, '/Images/Female Shoes 4.jpg'),
-(9, 'Boy Sneakers', 'male', 'child', 125, '/Images/Child Male 1.jpg'),
-(10, 'Female Sneakers', 'female', 'child', 75, '/Images/Child Female 1.jpg');
+(1, 'Men Sneakers', 'male', 'adult', 100, 'popular1.jpg'),
+(2, 'Men Sneakers', 'male', 'adult', 120, 'popular2.jpg'),
+(3, 'Dress Shoes', 'male', 'adult', 55, 'popular3.jpg'),
+(4, 'Dress Shoes', 'male', 'adult', 50, 'popular4.jpg'),
+(5, 'High Heels', 'female', 'adult', 200, 'Female Shoes 1.png'),
+(6, 'High Heels', 'female', 'adult', 50, 'Female Shoes 2.png'),
+(7, 'High Heels', 'female', 'adult', 150, 'Female Shoes 3.png'),
+(8, 'High Heels', 'female', 'adult', 300, 'Female Shoes 4.png'),
+(9, 'Boy Sneakers', 'male', 'child', 125, 'Child Male 1.png'),
+(10, 'Female Sneakers', 'female', 'child', 75, 'Child Female 1.png');
 
 --
 -- Indexes for dumped tables
@@ -90,7 +90,7 @@ ALTER TABLE `shoes`
 -- AUTO_INCREMENT for table `cart`
 --
 ALTER TABLE `cart`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- AUTO_INCREMENT for table `shoes`

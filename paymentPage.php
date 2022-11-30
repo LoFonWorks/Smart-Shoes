@@ -74,12 +74,12 @@
     </script>
 
     <header>
-        <a href="home.html"><img src="shoe.png" alt="Smart Shoes" id="logoimg"/></a>
+        <a href="home.php"><img src="shoe.png" alt="Smart Shoes" id="logoimg"/></a>
         <h6>
          ..
         </h6>
         <div class="navbar">
-            <a id="a1" href="home.html">Home</a>
+            <a id="a1" href="home.php">Home</a>
             <a id ="a1" href="searchPage.php">Men</a>
             <a id="a1" href="searchPage.php">Woman</a>
             <a id="a1" href="searchPage.php">Kids</a>

@@ -274,8 +274,7 @@ div.col-2-3
 {
     float: left;
     width: 40%;
-    min-height: 95%;
-    max-height: 98%;
+    height: 100%;
 }
 
 .item div

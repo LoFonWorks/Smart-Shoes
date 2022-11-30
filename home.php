@@ -15,7 +15,7 @@
 <body>
 <?php include 'databaseConnection.php'; ?>
     <header>
-        <a href="home.html"><img src="shoe.png" alt="Smart Shoes" id="logoimg"/></a>
+        <a href="home.php"><img src="shoe.png" alt="Smart Shoes" id="logoimg"/></a>
         <h6>
         ..
         </h6>

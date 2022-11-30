@@ -41,7 +41,7 @@ class SaleLineItem {
 //     return new SaleLineItem(item, 2);
 // })
 
-let related_products = [new Product(2, "Men sneakers red", 120, './images/popular2.jpg')]
+let related_products = [new Product(2, "Men sneakers red", 120, 'popular2.jpg')]
 
 let store_data_to_storage = (key, data) => {
     // sessionStorage.setItem(key, JSON.stringify(data));
