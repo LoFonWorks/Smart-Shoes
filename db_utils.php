@@ -55,7 +55,7 @@ function remove_item_from_cart($item_id, $user_id) {
                                WHERE
                                     user_id = {$user_id} AND item_id = {$item_id}";
 
-    $count = $con->query($select_query_statement)->fetch_assoc()['quantity'];
+    $count = isset($con->query($select_query_statement)->fetch_assoc()['quantity']);
 
     if($count > 1)
     {

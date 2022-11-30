@@ -80,9 +80,9 @@
         </h6>
         <div class="navbar">
             <a id="a1" href="home.php">Home</a>
-            <a id ="a1" href="searchPage.php">Men</a>
-            <a id="a1" href="searchPage.php">Woman</a>
-            <a id="a1" href="searchPage.php">Kids</a>
+            <a id ="a1" href="searchPage.php?filter=men">Men</a>
+            <a id="a1" href="searchPage.php?filter=women">Woman</a>
+            <a id="a1" href="searchPage.php?filter=kids">Kids</a>
             <a id="a1" href="paymentPage.php">Cart</a>
             <div class="subnav">
                 <button class="subbut">Contact<i class="fa fa-caret-down"></i></button>
