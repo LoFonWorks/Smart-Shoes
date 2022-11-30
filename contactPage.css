@@ -6,10 +6,6 @@
 */
 
 /*Initial Settings*/
-* {
-    font-family: Champagne, cursive;
-}
-
 article, aside, figcaption, figure,
 footer, header, main, nav, section { 
    display: block;
@@ -38,6 +34,7 @@ html {
 
 body {
     background-color: rgb(255, 255, 255);
+    font-family: Verdana, Geneva, Arial, sans-serif; 
     box-shadow: rgb(20, 20, 20) 20px 0px 20px,  rgb(20, 20, 20) -20px 0px 20px,
                 inset rgb(10, 10, 10) 0px 0px 10px;
     border-left: 3px solid rgb(20, 20, 20);
@@ -50,10 +47,17 @@ body {
 }
 
 #inputBox {
-    height: 625px;
+    height: 700px;
     line-height: 38px;
     margin-top: 5%;
 }
+
+
+/*
+header {
+    border-bottom: 1px solid rgb(0, 0, 0);
+}
+*/
 
 #logoimg
 {
@@ -72,7 +76,7 @@ header h6 {
     color: rgba(0, 0, 0, 0);
 }
 
-.navbar{
+header nav ul {
     background-color: rgb(67,110,209);
     list-style-type: none;
     margin: 0;
@@ -81,84 +85,33 @@ header h6 {
     box-shadow: inset 0 5px 15px 0px rgba(0, 0, 0, 0.75);
     text-align: center;
     width: 100%;
-    overflow: hidden; 
-    font-size: 1.5em;
+    overflow: auto;
+    
 }
-.navbar a{
+header nav ul li {
+    font-size: 1.2em;
+    line-height: 2.3em;
+    display: inline;
+    height: 2.3em;
+    padding: 0px 15px 0px 15px;
+}
+header nav ul li a {
     font-weight: bold;
     color: black;
-    width: 100%;
     text-decoration: none;
-    float: left;
     padding: 5px;
-    width: 14.89%;
+    width: 12.5%;
     text-align: center;
+   
 }
-.subnav{
-    font-weight: bold;
-    color: black;
-    width: 100%;
-    text-decoration: none;
-    float: left;
-    padding: 5px;
-    width: 14.89%;
-    text-align: center;
-    margin-top: -5px;
-}
-.subbut{
-    font-weight: bold;
-    color: black;
-    width: 100%;
-    text-decoration: none;
-    float: none;
-    padding: 5px;
-    width: 100%;
-    text-align: center;
-    background-color: transparent;
-    border:none;
-    font-size: 1em;
-}
-
-.navbar #a1:hover, .subnav:hover .subbut{
+header nav ul li a:hover {
     background-color: #f62f5e;
     color:#fff;
     text-decoration: none;
     border-radius: 30px;
-    padding: .20em 0.2em;
 }
-
-.content {
-   display: none;
-   position:absolute;
-   background-color: blue;
-   width: 20%;
-   text-align:left;
-   cursor: pointer;
-   border-radius: 30px;
-}
-
-.content #p1{
-    color: white;
-    text-decoration: none;
-    margin-left: 40px;
-}
-.content #p1 a{
-    color: white;
-    text-decoration: none;
-    margin-top: -5px;
-}
-.content #p1:hover{
-    background-color: #f62f5e;
-    color:black;
-    border-radius: 10px;
-    width: 85%;
-}
-.subnav:hover .content{
-    display:block;
-    white-space: nowrap;
-    font-size: 0.7em
-}
-.subnav:hover{
+header nav ul li a:active {
+    background-color: rgb(168, 207, 95);
     text-decoration: none;
 }
 
