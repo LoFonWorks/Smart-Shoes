@@ -5,7 +5,7 @@
     <!--
         Smart shoe Payment Page HTML
         Author: Muhammad Shazad Yousufzai Pathan
-        Date:   11/2/22
+        Date:   11/28/22
         Filename:   paymentPage.php
         -->
     <meta charset="utf-8" />
