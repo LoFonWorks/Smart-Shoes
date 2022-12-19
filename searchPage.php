@@ -110,12 +110,6 @@
                             <button type="button" id="clearButton" onclick="filterClear()">Clear Filters</button>
 
                             <script> 
-                                /*
-                                $(document).ready(function () {
-                                    $("#filterButton").click(function () {
-                                        alert("Your filters have been applied.");
-                                    });
-                                }); */
                                 
                                 function filterClear() {
                                     document.getElementById('genderNone').click();
@@ -173,7 +167,7 @@
                         if(isset($_GET['search'])) //If the user uses the search bar
                         {
                             $search = trim($_GET['search']);
-                            $query = "SELECT name, cost, shoeArtifact
+                            $query = "SELECT id, name, cost, shoeArtifact
                                       FROM shoes
                                       WHERE name LIKE '%$search%'";
                             $result = mysqli_query($con, $query);
